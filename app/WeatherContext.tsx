@@ -19,9 +19,9 @@ const WeatherContext = createContext<WeatherContextType | undefined>(undefined)
 export const WeatherProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [city, setCity] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("lastCity") || "London"
+      return localStorage.getItem("lastCity") || "Hyderabad"
     }
-    return "London"
+    return "Hyderabad"
   })
   const [unit, setUnit] = useState<"metric" | "imperial">(() => {
     if (typeof window !== "undefined") {

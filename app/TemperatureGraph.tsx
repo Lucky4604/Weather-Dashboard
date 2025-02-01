@@ -37,20 +37,6 @@ export function TemperatureGraph({ data }: TemperatureGraphProps) {
     <Card className="bg-white/10 border-0 text-white p-4 mt-6">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-xl font-semibold">Temperature Forecast</h3>
-        <div>
-          <button
-            onClick={() => setGraphUnit("metric")}
-            className={`px-2 py-1 rounded ${graphUnit === "metric" ? "bg-blue-500 text-white" : "bg-gray-700 text-gray-300"}`}
-          >
-            °C
-          </button>
-          <button
-            onClick={() => setGraphUnit("imperial")}
-            className={`px-2 py-1 rounded ml-2 ${graphUnit === "imperial" ? "bg-blue-500 text-white" : "bg-gray-700 text-gray-300"}`}
-          >
-            °F
-          </button>
-        </div>
       </div>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={graphData}>
